@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="A platform for performing artists and creators to monetize their content.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Base Href -->
+    <base href="$FLUTTER_BASE_HREF">
+    
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="CineStream">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    
+    <!-- Title -->
+    <title>CineStream</title>
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Firebase JS SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js"></script>
+    
+    <!-- Firebase Configuration -->
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyB9vOfsEqyiGwSNryuCipyqiFL22lpCPRs",
+            authDomain: "cinestream-e3446.firebaseapp.com",
+            databaseURL: "https://cinestream-e3446-default-rtdb.firebaseio.com",
+            projectId: "cinestream-e3446",
+            storageBucket: "cinestream-e3446.appspot.com",
+            messagingSenderId: "771741804521",
+            appId: "1:771741804521:web:301f8a02bc3236f9da4d78",
+            measurementId: "G-0V8KXQ5S5W"
+        };
+        
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const storage = firebase.storage();
+    </script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#search"><i class="fas fa-search"></i> Search</a></li>
+            <li><a href="#community"><i class="fas fa-users"></i> Community</a></li>
+            <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="#chatbot"><i class="fas fa-robot"></i> Chatbot</a></li>
+            <li><a href="#download"><i class="fas fa-download"></i> Download App</a></li>
+            <li><a href="#features"><i class="fas fa-list"></i> Features</a></li>
+            <li><a href="#technologies"><i class="fas fa-tools"></i> Technologies</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Home Page -->
+    <section id="home">
+        <h1>Welcome to CineStream</h1>
+        <p>A platform for performing artists and creators to monetize their content.</p>
+        <button onclick="navigateToChatbot()">Chat with our Bot</button>
+    </section>
+    
+    <!-- Search Page -->
+    <section id="search">
+        <h1>Search</h1>
+        <p>Find your favorite creators and their content.</p>
+    </section>
+    
+    <!-- Community Page -->
+    <section id="community">
+        <h1>Community</h1>
+        <p>Join the community chats and connect with others.</p>
+    </section>
+    
+    <!-- Settings Page -->
+    <section id="settings">
+        <h1>Settings</h1>
+        <p>Manage your account and preferences.</p>
+    </section>
+    
+    <!-- Chatbot Page -->
+    <section id="chatbot">
+        <h1>Chatbot</h1>
+        <p>Chat with our automated bot for assistance.</p>
+    </section>
+    
+    <!-- Download Page -->
+    <section id="download">
+        <h1>Download CineStream App</h1>
+        <p>Get the Android app from the link below:</p>
+        <a href="YOUR_GOOGLE_DRIVE_LINK" download>Download Android App</a>
+    </section>
+
+    <!-- Features Page -->
+    <section id="features">
+        <h1>Features</h1>
+        <div class="features-section">
+            <h2>For Users:</h2>
+            <ul>
+                <li><i class="fas fa-user-plus"></i> Registration and login functionality</li>
+                <li><i class="fas fa-user-circle"></i> Access to User-side User Interface</li>
+                <li><i class="fas fa-user-cog"></i> Ability to change profile settings</li>
+                <li><i class="fas fa-search"></i> Ability to search, watch, purchase content</li>
+                <li><i class="fas fa-bell"></i> Ability to add reminders and view purchased ticket details</li>
+                <li><i class="fas fa-video"></i> Ability to watch live-streaming and post-published content</li>
+                <li><i class="fas fa-users"></i> Access to community page and engage with creators</li>
+                <li><i class="fas fa-user-edit"></i> Ability to change profile to creator profile if desired</li>
+            </ul>
+        </div>
+        <div class="features-section">
+            <h2>For Creators:</h2>
+            <ul>
+                <li><i class="fas fa-user-plus"></i> Registration and login functionality</li>
+                <li><i class="fas fa-user-circle"></i> Access to creator-side User Interface</li>
+                <li><i class="fas fa-user-cog"></i> Ability to change profile settings</li>
+                <li><i class="fas fa-user-check"></i> Can access everything same as users</li>
+                <li><i class="fas fa-broadcast-tower"></i> Ability to live stream content</li>
+                <li><i class="fas fa-calendar-alt"></i> Ability to list future live event updates</li>
+                <li><i class="fas fa-upload"></i> Ability to upload content after streaming</li>
+                <li><i class="fas fa-ticket-alt"></i> Ability to sell e-tickets</li>
+                <li><i class="fas fa-ad"></i> Ability to place suitable ad-bars and in-ads</li>
+                <li><i class="fas fa-chart-line"></i> Ability to check real-time revenue and perform transactions</li>
+                <li><i class="fas fa-ad"></i> Ability to seek adverts and check previous activities with creators</li>
+                <li><i class="fas fa-comments"></i> Ability to create, develop, and manage community, and engage with audience through video chats and messages</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Technologies Used -->
+    <section id="technologies">
+        <h1>Technologies Used</h1>
+        <ul>
+            <li><i class="fab fa-figma"></i> Figma</li>
+            <li><i class="fas fa-mobile-alt"></i> Flutter</li>
+            <li><i class="fas fa-code"></i> Dart</li>
+            <li><i class="fas fa-database"></i> Firebase</li>
+            <li><i class="fas fa-brain"></i> Tensor Flow</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 CineStream. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="flutter.js" defer></script>
+    <script>
+        function navigateToChatbot() {
+            document.getElementById('chatbot').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+/* Add your styling here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('./assets/theator.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #c70039;
+}
+
+section {
+    padding: 2em;
+    text-align: center;
+    margin-top: 3em;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+button {
+    background-color: #c70039;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+button:hover {
+    background-color: #ff5733;
+}
+
+#technologies ul {
+    list-style: none;
+    padding: 0;
+}
+
+#technologies ul li {
+    display: inline-block;
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+#features ul {
+    list-style: none;
+    padding: 0;
+}
+
+#features ul li {
+    margin: 10px 0;
+    text-align: left;
+    position: relative;
+    padding-left: 30px;
+    transition: transform 0.2s;
+}
+
+#features ul li:hover {
+    transform: translateX(10px);
+    color: #ff5733;
+}
+
+#features ul li i {
+    position: absolute;
+    left: 0;
+    color: #c70039;
+}
+
+.features-section {
+    margin-bottom: 2em;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
